@@ -1,6 +1,6 @@
 Alura_Challenge_One_Decodificador_T7
 
-Codificador e decodificador de texto Experimente o criptografador aqui:[] ( https://fernandaabreudev.github.io/desafio-decodificador-alura/ )
+Codificador e decodificador de texto Experimente o criptografador aqui:[] ( [https://fernandaabreudev.github.io/desafio-decodificador-alura/](https://fernandaabreudev.github.io/desafio-decodificador-de-texto/) )
 
 🔐 Decodificador de Texto - Desvende o Mistério da Criptografia Este repositório contém a solução para o desafio Decodificador de Texto, parte do curso "Praticando Lógica de Programação" da Alura , em parceria com o programa Oracle Next Education .
 
