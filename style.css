@@ -1,0 +1,131 @@
+* {
+    background: #E5E5E5;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.logoAlura {
+    margin-left: 10px;
+    padding-top: 10px;
+    width: 2%;
+}
+
+main {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.text-area {
+    border: none;
+    color: #0a3871;
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+
+::placeholder { 
+    color: #0a3871; 
+}
+
+.text-area:focus {
+    outline: none;
+}
+
+.mensagem-container {
+    position: relative;
+    display: inline-block;
+}
+
+.mensagem {
+    background: white;
+    background-image: url(imagens/Boneco.png);
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 24px;
+    color: #0a3871;
+    margin-left: 98px;
+    margin-top: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+.mensagem::placeholder {
+    text-align: left; /* Alinha o placeholder à esquerda */
+    position: absolute;
+    bottom: 100px; /* Ajuste conforme necessário */
+}
+
+.mensagem:focus {
+    outline: none;
+}
+
+.botoes {
+    display: flex;
+    margin-top: 18px;
+}
+
+.btn-Desencriptar {
+    background: #d8dfe8;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: #0a3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+}
+
+.btn-Encriptar {
+    background-color: #0a3871;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+
+.btn-Copiar {
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: #0a3871;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin-left: 40px;
+    margin-right: 20px ;
+}
+
+.informacao {
+    color: #494047;
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    color: #0A3871;
+    
+    padding: 40px 0;
+    display: block;
+    height: auto;
+}
+
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.link_linkedin img {
+    width: 32px; /* Ajuste conforme necessário */
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}

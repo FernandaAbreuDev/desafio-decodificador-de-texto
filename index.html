@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador</title>
+    <title>Imagem de Fundo para Tela Inteira</title>
+    
+</head>
+<body>
+    <header>
+        <img class="logoAlura" src="imagens/logoAlura.png" alt="logo alura">
+    </header>
+
+    <main>
+        <section>
+            <textarea class="text-area" cols="41" rows="4" placeholder="digite seu texto"></textarea>
+    
+            <div class="informacao"> 
+                <h6>Apenas letras minúsculas e sem acento.</h6>
+            </div>
+    
+            <div class="botoes">
+                <button class="btn-Encriptar" onclick="btnEncriptar()">Criptografar</button>
+                <button class="btn-Desencriptar" onclick="btnDesencriptar()">Descriptografar</button>
+            </div>
+        </section>
+                
+        <section>
+            <div class="mensagem-container">
+                <textarea class="mensagem" cols="20" rows="11"placeholder="Nenhuma mensagem encontrada."></textarea></textarea>
+                <button class="btn-Copiar" onclick="copiarTexto()">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        
+        </a>
+        <p class="copyright">&copy; Desenvolvido por Yorrana Victoria | 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
