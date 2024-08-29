@@ -1,12 +1,29 @@
 const textArea = document.querySelector(".text-area");
 const mensagem = document.querySelector(".mensagem");
+const botaoCopiar = document.querySelector('.btn-Copiar');
+botaoCopiar.style.display = 'none';
 
-function btnEncriptar() {
-    const textoEncriptado = encriptar(textArea.value);
-    mensagem.value = textoEncriptado;
+function mensagemNaoEncontrada(alerta) {
+    mensagem.value = '';
+    mensagem.placeholder = "Nenhuma mensagem encontrada.";
+    mensagem.style.backgroundImage = "url(imagens/Boneco.png)";
+    botaoCopiar.style.display = 'none';
+    alert(`Digite um texto a ser ${alerta}.`);
+}
+function retiraAvisoDeMensagemNaoEncontrada() {
     textArea.value = "";
     mensagem.style.backgroundImage = 'none';
-    mensagem.placeholder = ''; // Remove o placeholder ao criptografar
+    mensagem.placeholder = ''; // Remove o placeholder ao criptografar ou descriptografar
+    botaoCopiar.style.display = 'block'; // Faz o botão de copiar aparecer
+}
+function btnEncriptar() {
+    if (textArea.value.trim() == '') {
+        mensagemNaoEncontrada('criptografado');
+    } else {
+        const textoEncriptado = encriptar(textArea.value);
+        mensagem.value = textoEncriptado;
+        retiraAvisoDeMensagemNaoEncontrada();
+    }
 }
 
 function encriptar(stringDesencriptada) {
@@ -23,9 +40,13 @@ function encriptar(stringDesencriptada) {
 }
 
 function btnDesencriptar() {
-    const textoDesencriptado = desencriptar(textArea.value);
-    mensagem.value = textoDesencriptado;
-    textArea.value = "";
+    if (textArea.value.trim() == '') {
+        mensagemNaoEncontrada('descriptografado');
+    } else {
+        const textoDesencriptado = desencriptar(textArea.value);
+        mensagem.value = textoDesencriptado;
+        retiraAvisoDeMensagemNaoEncontrada();
+    }
 }
 
 function desencriptar(stringEncriptada) {
@@ -40,6 +61,7 @@ function desencriptar(stringEncriptada) {
 
     return stringDesencriptada;
 }
+
 function copiarTexto() {
     const mensagem = document.querySelector(".mensagem");
 
@@ -47,7 +69,8 @@ function copiarTexto() {
         alert("Texto copiado para a área de transferência!");
         mensagem.value = '';
         mensagem.placeholder = "Nenhuma mensagem encontrada.";
-        mensagem.style.backgroundImage = "url(imagens/pencador.png)";
+        mensagem.style.backgroundImage = "url(imagens/Boneco.png)";
+        botaoCopiar.style.display = 'none';
     }).catch(err => {
         console.error("Erro ao copiar o texto: ", err);
     });
